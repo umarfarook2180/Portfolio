@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* ── FEATURED PROJECTS ── */}
-      <section className="section">
+      <section className="section" style={{ background: "var(--bg2)" }}>
         <div className="container">
           <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.85rem", color: "var(--accent)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12 }}>Work</p>
           <h2 className="section-title">Featured <span>Projects</span></h2>
@@ -245,80 +245,6 @@ export default function Home() {
           </h2>
           <p style={{ color: "var(--text2)", marginBottom: 36, fontSize: "1.1rem" }}>
             Open to exciting full-stack and software engineering opportunities.
-          </p>
-          <Link to="/contact" className="btn btn-primary" style={{ fontSize: "1rem", padding: "14px 36px" }}>
-            Start a Conversation →
-          </Link>
-        </div>
-      </section>
-    </>
-  );
-}
-            {projects.map(p => (
-              <div className="project-card" key={p.id}>
-                <img src={p.image} alt={p.title} className="project-img" />
-                <div className="project-body">
-                  <h3 className="project-title">{p.title}</h3>
-                  <p className="project-desc">{p.description}</p>
-                  <div className="project-tech">
-                    {p.tech.map(t => <span className="tag" key={t}>{t}</span>)}
-                  </div>
-                  <div className="project-links">
-                    {p.github && <a href={p.github} target="_blank" rel="noreferrer" className="btn btn-outline project-link">GitHub</a>}
-                    {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="btn btn-primary project-link">Live ↗</a>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 48 }}>
-            <Link to="/projects" className="btn btn-outline">View All Projects →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── LATEST POSTS ── */}
-      <section className="section">
-        <div className="container">
-          <p style={{ fontFamily: "'DM Mono', monospace", fontSize: "0.85rem", color: "var(--accent)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12 }}>Writing</p>
-          <h2 className="section-title">Latest <span>Posts</span></h2>
-          <p className="section-subtitle">Thoughts on code, tools, and the craft.</p>
-
-          <div className="blog-grid">
-            {posts.map(post => (
-              <Link to={`/blog/${post.slug}`} key={post.id} className="blog-card" style={{ textDecoration: "none", color: "inherit" }}>
-                <img src={post.image} alt={post.title} className="blog-img" />
-                <div className="blog-body">
-                  <div className="blog-meta">
-                    <span>{post.date}</span>
-                    <span>·</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="blog-title">{post.title}</h3>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                  <div className="blog-tags">
-                    {post.tags.map(t => <span className="tag" key={t}>{t}</span>)}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 48 }}>
-            <Link to="/blog" className="btn btn-outline">Read All Posts →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section style={{ padding: "80px 0", background: "var(--bg2)", borderTop: "1px solid var(--border)" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", marginBottom: 16 }}>
-            Let's build something <span style={{ color: "var(--accent)", fontStyle: "italic" }}>great</span> together
-          </h2>
-          <p style={{ color: "var(--text2)", marginBottom: 36, fontSize: "1.1rem" }}>
-            I'm currently available for freelance projects and full-time roles.
           </p>
           <Link to="/contact" className="btn btn-primary" style={{ fontSize: "1rem", padding: "14px 36px" }}>
             Start a Conversation →
